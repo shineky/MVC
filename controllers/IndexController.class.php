@@ -4,7 +4,8 @@
 class IndexController
 {
 	public function index()
-	{
-		echo "Index";
+	{	
+		global $smarty;
+		$smarty->display('Index/index.html');
 	}
 }
