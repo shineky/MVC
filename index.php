@@ -21,18 +21,6 @@ function mvc_autoload($classname)
 // 导入smarty模板引擎
 require './libs/Smarty.class.php';
 
-$smarty = new Smarty();
-
-// 配置smarty
-$smarty->setTemplateDir('./views')  //模板
-       ->setCompileDir('./runtime/views_c')  //编译
-       ->setConfigDir('./configs')  //配置
-       ->setCacheDir('./runtime/caches');  //缓存
-$smarty->left_delimiter =  '<{';
-$smarty->right_delimiter = '}>'; 
-$smarty->caching = false;
-$smarty->cache_lifrtime = 30;
-
 // 将自定义的自动加载函数注册为系统的加载函数
 spl_autoload_register('mvc_autoload');
 

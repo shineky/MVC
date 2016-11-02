@@ -1,11 +1,10 @@
 <?php
 
 // 首页控制器
-class IndexController
+class IndexController extends Controller
 {
 	public function index()
 	{	
-		global $smarty;
-		$smarty->display('Index/index.html');
+		$this->display('Index/index.html');
 	}
 }

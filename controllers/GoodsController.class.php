@@ -1,7 +1,7 @@
 <?php
 
 // 商品控制器
-class GoodsController
+class GoodsController extends Controller
 {
 	public function index()
 	{

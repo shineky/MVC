@@ -1,7 +1,7 @@
 <?php
 
 // 用户控制器
-class UserController
+class UserController extends Controller
 {
 	public function index()
 	{
