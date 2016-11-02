@@ -7,8 +7,8 @@ require './configs/config.php';
 // 自动加载类
 function mvc_autoload($classname)
 {
-	if (file_exists("./model/{$classname}.class.php")) {
-		require "./model/{$classname}.class.php";
+	if (file_exists("./models/{$classname}.class.php")) {
+		require "./models/{$classname}.class.php";
 	}elseif (file_exists("./controllers/{$classname}.class.php")) {
 		require "./controllers/{$classname}.class.php";
 	}else{

@@ -16,7 +16,7 @@ class Controller extends Smarty
 	}
 
 	// 跳转
-	public function readirect($message, $url=null)
+	public function redirect($message, $url=null)
 	{
 		echo "<script>alert('{$message}')</script>";
 		if (empty($url)) {

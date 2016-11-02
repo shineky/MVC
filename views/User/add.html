@@ -1,0 +1,47 @@
+<{extends file="User/index.html"}>
+<{block name="main"}>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form role="form" action="./index.php?c=User&a=insert" method="POST">
+      <div class="form-group">
+        <label for="exampleInputUserName">姓名</label>
+        <input type="text" name="username" class="form-control" id="exampleInputUserName" value="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputName">账号</label>
+        <input type="text" name="name" class="form-control" id="exampleInputName">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword">密码</label>
+        <input type="password" name="pass" class="form-control" id="exampleInputPassword" value="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputSex">性别：</label>
+        <input type="radio" name="sex" id="inlineRadio1" value="1"> 男
+        <input type="radio" name="sex" id="inlineRadio2" value="2" checked> 女
+      </div>
+      <div class="form-group">
+        <label for="exampleInputAddress">地址</label>
+        <input type="text" name="address" class="form-control" id="exampleInputAddress" value="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputCode">邮编</label>
+        <input type="text" name="code" class="form-control" id="exampleInputCode" value="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPhone">电话</label>
+        <input type="text" name="phone" class="form-control" id="exampleInputPhone" value="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">邮箱</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="">
+      </div>
+      <center>
+      <button type="submit" class="btn btn-default">确认</button>
+      <button type="reset" class="btn btn-default">重置</button>
+      </center>
+    </form>
+  </div>
+</div>
+<{/block}>
