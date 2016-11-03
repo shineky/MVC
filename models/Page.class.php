@@ -30,7 +30,7 @@
 			$html .= "<li><a href='javascript:void(0)'>{$this->page}/{$this->totalPages}</a></li>";
 			$html .= "<li><a href='{$this->url}?p=".($this->page+1)."&name=".@$_POST['name']."&c=User'>&gt;</a></li>";
 			$html .= "<li><a href='{$this->url}?p={$this->totalPages}&c=User'>&raquo;</a></li></ul></nav></div>";
-			$html .= "<div class='col-md-4'></div><div class='col-md-4'><button class='btn btn-primary' type='button'>共 <span class='badge'>{$this->totalRows}</span> 条数据</button></div>";
+			$html .= "<div class='col-md-5'></div><div class='col-md-3'><button class='btn btn-primary' type='button'>共 <span class='badge'>{$this->totalRows}</span> 条数据</button></div>";
 			return $html;
 		}
 
