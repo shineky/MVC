@@ -14,10 +14,19 @@ class UserController extends Controller
 	}
 
 	public function index()
-	{
-		$list = $this->model->order('id desc')->select();
+	{	
+		if (empty($_POST['names'])) {
+	      $where = "";
+	    }else{
+	      $where = "name like '%$_POST[names]%'";
+	    }
+
+		$page = new Page($this->model->where($where)->count(),8);
+		$list = $this->model->where($where)->limit($page->limit())->select();
+		$fenye = $page->show();
 		$this->assign('title','HWmall用户列表');
 		$this->assign('list',$list);
+		$this->assign('fenye',$fenye);
 		$this->display('User/index.html');
 	}
 

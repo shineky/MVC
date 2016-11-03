@@ -20,12 +20,12 @@
 		<hr>
 		<{block name="main"}>
 
-		<form action="index.php" method="get">
+		<form action="index.php?c=User" method="post">
 	  		<div class="row">
 	   			<div class="col-md-4"></div>
 	    		<div class="col-md-4">
 	       			<div class="input-group">
-	          			<input type="text" name="name" class="form-control" placeholder="请输入账号关键字搜索">
+	          			<input type="text" name="names" class="form-control" placeholder="请输入账号关键字搜索">
 	          			<span class="input-group-btn">
 	            			<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 	          			</span>
@@ -71,7 +71,7 @@
 		    </div>
 		 </div><!--row-->
 		 <div class="row">
-		    
+		    <{$fenye}>
 		 </div>
 		<{/block}>
 	</div><!--END container-->

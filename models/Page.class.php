@@ -25,11 +25,11 @@
 
 		// 生成分页按钮 html内容
 		public function show(){
-			$html = "<div class='col-md-4'><nav><ul class='pagination' style='margin:0'><li><a href='{$this->url}?p=1'>&laquo;</a></li>";
-			$html .= "<li><a href='{$this->url}?p=".($this->page-1)."&name=".@$_GET['name']."'>&lt;</a></li>";
+			$html = "<div class='col-md-4'><nav><ul class='pagination' style='margin:0'><li><a href='{$this->url}?p=1&c=User'>&laquo;</a></li>";
+			$html .= "<li><a href='{$this->url}?p=".($this->page-1)."&name=".@$_POST['name']."&c=User'>&lt;</a></li>";
 			$html .= "<li><a href='javascript:void(0)'>{$this->page}/{$this->totalPages}</a></li>";
-			$html .= "<li><a href='{$this->url}?p=".($this->page+1)."&name=".@$_GET['name']."'>&gt;</a></li>";
-			$html .= "<li><a href='{$this->url}?p={$this->totalPages}'>&raquo;</a></li></ul></nav></div>";
+			$html .= "<li><a href='{$this->url}?p=".($this->page+1)."&name=".@$_POST['name']."&c=User'>&gt;</a></li>";
+			$html .= "<li><a href='{$this->url}?p={$this->totalPages}&c=User'>&raquo;</a></li></ul></nav></div>";
 			$html .= "<div class='col-md-4'></div><div class='col-md-4'><button class='btn btn-primary' type='button'>共 <span class='badge'>{$this->totalRows}</span> 条数据</button></div>";
 			return $html;
 		}
@@ -61,7 +61,8 @@
 
 		//获取当前url
 		protected function getUrl(){
-			$this->url = $_SERVER['PHP_SELF'];
+			// $this->url = $_SERVER['PHP_SELF'];
+			$this->url = './index.php';
 		} 
 	}
 	
